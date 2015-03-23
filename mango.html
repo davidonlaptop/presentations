@@ -12,6 +12,15 @@
     </script>
     <script type="text/javascript" src="remark.language.js"></script>
     <script type="text/javascript">
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+        // Usage:
+        //   ![:scale 50%](image.jpg)
+	// Outputs:
+	//   <img src="image.jpg" style="width: 50%" />
+      };
+
       var slideshow = remark.create({
         sourceUrl: 'mango.md',
         highlightStyle: 'monokai',
