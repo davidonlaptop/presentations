@@ -14,12 +14,21 @@
   - Variant filtering (per cohort)
 
 3. Preliminary analysis
-  - Genotype refinement - Phasing
-  - Genotype refinement - Imputation
+  - Genotype phasing
+  - Genotype imputation
+  - Genotype filtering
+  - Functional annotation
+  - Variant evaluation
 
 4. Whole Genome Analysis Studies (GWAS) 
-  - Functional annotation ?
-  - Variant evaluation ?
+  - Variants management
+  - Summary stats
+  - Population stratification
+  - Permutations
+  - Associations (family, proxy)
+  - Haplotype imputation
+  - Copy Number Variations
+  - ...
 
 ???
 
