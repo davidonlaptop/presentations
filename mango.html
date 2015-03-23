@@ -12,14 +12,27 @@
     </script>
     <script type="text/javascript" src="remark.language.js"></script>
     <script type="text/javascript">
-      remark.macros.scale = function (percentage) {
+      
+      /**
+       * Usage:   ![:scale 50%](image.jpg)
+       * Outputs: <img src="image.jpg" style="width: 50%" />
+       */
+      remark.macros.scale = function (percentage)
+      {
         var url = this;
         return '<img src="' + url + '" style="width: ' + percentage + '" />';
-        // Usage:
-        //   ![:scale 50%](image.jpg)
-	// Outputs:
-	//   <img src="image.jpg" style="width: 50%" />
       };
+
+      /**
+       * Usage:   ![:svg](image.svg)
+       * Outputs: <object type="image/svg+xml" data="image.svg">Your browser does not support SVG</object> 
+       */
+      remark.macros.svg = function ()
+      {
+        var url         = this;
+        var fallbackMsg = "Your browser does not support SVG";
+	return '<object type="image/svg+xml" data="' + url + '">' + fallbackMsg + '</object>';
+      }
 
       var slideshow = remark.create({
         sourceUrl: 'mango.md',
