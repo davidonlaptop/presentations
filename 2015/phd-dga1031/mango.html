@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remark Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="remark-demo.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script type="text/javascript" src="remark.language.js"></script>
+    <script type="text/javascript">
+      
+      /**
+       * Usage:   ![:scale 50%](image.jpg)
+       * Outputs: <img src="image.jpg" style="width: 50%" />
+       */
+      remark.macros.scale = function (percentage)
+      {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+
+      /**
+       * Usage:   ![:svg](image.svg)
+       * Outputs: <object type="image/svg+xml" data="image.svg">Your browser does not support SVG</object> 
+       */
+      remark.macros.svg = function ()
+      {
+        var url         = this;
+        var fallbackMsg = "Your browser does not support SVG";
+	return '<object type="image/svg+xml" data="' + url + '">' + fallbackMsg + '</object>';
+      }
+
+      var slideshow = remark.create({
+        sourceUrl: 'mango.md',
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+      });
+    </script>
+  </body>
+</html>
