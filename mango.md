@@ -11,6 +11,7 @@ layout: true
 ---
 
 ## Background and related work
+<object type="image/svg+xml" data="images/broad-dnaseq.svg">Your browser does not support SVG</object>
 
 ---
 

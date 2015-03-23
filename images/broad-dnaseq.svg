@@ -1,0 +1,16 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     viewBox="0 0 1944 1008">
+
+  <!-- FIXME: SVG seems to have a padding/margin of 9x5 pixels -->
+
+  <!--
+       Original dimensions: 1944 x 1008
+       Context: https://www.broadinstitute.org/gatk/guide/best-practices?bpm=index
+       Source:  http://cdn.vanillaforums.com/gatk.vanillaforums.com/FileUpload/eb/44f317f8850ba74b64ba47b02d1bae.png
+   -->
+  <image width="100%" height="100%" xlink:href="broad-dnaseq.png" />
+</svg>
