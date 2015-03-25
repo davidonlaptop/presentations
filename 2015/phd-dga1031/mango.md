@@ -100,22 +100,22 @@ class: center
 - The most popular human genomic data analysis tool is plink (Harvard University)
 - Large volume of data is slowing down the DNA variant discovery process
   - Some analysis task takes up to a **multiple days** to compute the results
-- Most promising recent technology, ADAM (Berkeley University), uses Big Data techniques
 
 ---
 
 ## Research questions
-- How can the performance of genomic analysis be improved?
+- How can the performance of genomic analysis algorithms executed by Plink be improved?
   - What are the most problematic plink use cases today ?
+    - IBS / MDS
   - What is the technological bottleneck ?
   - How can it be improved while retaining compatibility with existing software ?
 
 ---
 
 ## Objective of this research
-- Propose a **scalable genomic analytics framework**, named MANGO, compatible with the ADAM format (Berkeley University).
 - Identify the **missing data structures** in ADAM format to allow plink scalability;
 - Identify the **Big Data techniques** that are required to improve the scalability of plink;
+- Propose a **scalable genomic analytics framework**, named MANGO, compatible with the ADAM format (Berkeley University) and Plink format that implements Big Data techniques and missing data structures to achieve higher scalability for IBS/MDS use case
 
 ---
 
@@ -125,7 +125,7 @@ class: center
 
 ---
 
-## Methodology - Planning (Basili Framework)
+## Research Methodology (Basili Framework)
 
 ![:svg](images/basili.svg)
 
@@ -137,15 +137,14 @@ class: center
 
 ---
 
-## Methodology - Experimentation
-- Tools used:
-  - Apache **Spark**: Processing engine (Spark is the most active Big Data technology of 2014).
-  - **MLlib**: machine learning library
-  - **ADAM**: Genomics Formats
-  - **Avocado**: DNA Variant Calling
-  - **Scala**: programming language
-  - **Docker**: infrastructure
-  - **Parquet/Avro**: file format
+## Related work
+- Apache **Spark**: Processing engine (Spark is the most active Big Data technology of 2014).
+- **MLlib**: machine learning library
+- **ADAM**: Genomics Formats
+- **Avocado**: DNA Variant Calling
+- **Scala**: programming language
+- **Docker**: infrastructure
+- **Parquet/Avro**: file format
 
 ---
 
