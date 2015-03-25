@@ -1,14 +1,17 @@
 
 layout: true
 ---
+name: titlepage
+class: center
 
-## Mango: Massive data mining ANalysis of Genetic Observations
+# MANGO:
+## Massive data mining ANalysis of Genetic Observations
 
-- TODO: fix front page
-- David Lauzon
-- ETS - DGA1031
-- Montreal,QC, March 25th 2015
-- Director: Prof. Alain April
+.author[###David Lauzon]
+.director[###Prof. Alain April]
+.course[####DGA1031, ETS]
+.location[####Montreal, QC]
+.date[####March 25th 2015]
 
 ---
 
