@@ -1,0 +1,454 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     viewBox="0 0 4000 3000"
+     class="basili"
+     font-size="70">
+  
+<!-- CodePen: http://codepen.io/davidonlaptop/pen/qEgxpZ?editors=110 -->
+
+  <style type="text/css">
+    <![CDATA[
+/*
+.legacy.software  { display:none; }
+.bigdata.berkeley { display:none; }
+.bigdata.mango    { display:none; }
+*/
+
+.badge text {
+  font-family: "DejaVu Sans", Verdana,Geneva,sans-serif;
+}
+
+.badge rect {
+  stroke-width: 10;
+}
+
+.basili-stage {
+  overflow:visible;
+}
+.basili-activity {
+  overflow:visible;
+}
+.column-header {
+  font-weight: bold;
+}
+#markerCircle {
+  stroke: none;
+  fill: black;
+}
+#markerArrow {
+  fill: black;
+}
+.link {
+  stroke: blue;
+  stroke-width: 10;
+  fill: none;
+  marker-start: url(#markerCircle);
+  marker-end: url(#markerArrow);
+  stroke: black;
+}
+
+.green.badge rect {
+  fill: rgb(141,190,0);
+  fill-opacity: 100%;
+}
+.green.badge text {
+  fill: white;
+}
+
+.gray.badge rect {
+  fill: #555555;
+  fill-opacity: 100%;
+}
+.gray.badge text {
+  fill: white;
+}
+
+.red.badge rect {
+  fill: rgb(211,90,64);
+  fill-opacity: 100%;
+}
+.red.badge text {
+  fill: white;
+}
+
+.blue.badge rect {
+  fill: rgb(0,119,186);
+  fill-opacity: 100%;
+}
+.blue.badge text {
+  fill: white;
+}
+
+
+.white.badge rect {
+  fill: #0;
+  stroke: #005000;
+  fill-opacity: 0%;
+}
+    ]]>
+  </style>
+  
+  <defs>
+    <marker id="markerCircle" viewBox="-2 -2 4 4" markerWidth="4" markerHeight="4" refx="0" refy="0">
+      <circle cx="0" cy="0" r="2" />
+    </marker>
+    <marker id="markerArrow" viewBox="0 -3 6 6" markerWidth="6" markerHeight="6" refx="0" refy="0" orient="auto">
+      <path d="M0,-3 L0,3 L6,0"/>
+    </marker>
+  </defs>
+  
+  <!-- Stage: Column 1 -->
+  <svg class="basili-stage" x="220" y="200">
+    <svg class="blue badge column-header" x="0" y="-160" font-size="90">
+      <rect width="1000" height="200" rx="50" />
+      <text transform="translate(110,60)">
+        <tspan x="0" dy="75">Pre-processing</tspan>
+        <tspan x="0" dy="75"> </tspan>
+      </text>
+    </svg>
+    
+    <!-- Activity: Definition -->
+    <svg class="basili-activity" x="0" y="150">
+      <svg class="gray badge processing-step" x="0" font-size="60">
+        <rect width="1000" height="300" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="100">Raw DNA reads from sample</tspan>
+          <tspan x="0" dy="100">(laboratory instruments)</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,300 L500,490" />
+    </svg>
+    <!-- END Activity: Definition -->
+    
+    <!-- Activity: Litterature review -->
+    <svg class="basili-activity" x="0" y="700">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Map to reference genome</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">SNAP</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="-225" y="0" font-size="50">
+        <rect width="225" height="300" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">up to</tspan>
+          <tspan x="0" dy="75">100X</tspan>
+          <tspan x="0" dy="75">faster</tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">BWA</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Litterature review -->
+    
+    <!-- Activity: Identification of Scaling issues -->
+    <svg class="basili-activity" x="0" y="1250">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Mark duplicates</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="-225" y="0" font-size="50">
+        <rect width="225" height="300" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">up to</tspan>
+          <tspan x="0" dy="75">50X</tspan>
+          <tspan x="0" dy="75">faster</tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">ADAM</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Picard</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Identification of Scaling issues -->
+    
+    <!-- Activity: Experiment 1 -->
+    <svg class="basili-activity" x="0" y="1800">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Indel and BQSR</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">ADAM</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">GATK</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link column-link" d="M1000,75 C1300,225 1000,-1580 1240,-1575" />
+    </svg>
+    <!-- END Activity: Experiment 1 -->    
+  </svg>
+  <!-- END Stage: Column 1 -->
+  
+  
+  
+  <!-- Stage: Column 2 -->
+  <svg class="basili-stage" x="1520" y="200">
+    <svg class="blue badge column-header" x="0" y="-160" font-size="90">
+      <rect width="1000" height="200" rx="50" />
+      <text transform="translate(60,60)">
+        <tspan x="0" dy="75">Variant Discovery</tspan>
+        <tspan x="0" dy="75"> </tspan>
+      </text>
+    </svg>
+    
+    <!-- Activity: Definition -->
+    <svg class="basili-activity" x="0" y="150">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Variant calling</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">AVOCADO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">GATK</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Definition -->
+    
+    <!-- Activity: Litterature review -->
+    <svg class="basili-activity" x="0" y="700">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Joint cohort</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">AVOCADO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">GATK</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Litterature review -->
+    
+    <!-- Activity: Identification of Scaling issues -->
+    <svg class="basili-activity" x="0" y="1250">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Variant recalibration</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">AVOCADO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">GATK</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Identification of Scaling issues -->
+    
+    <!-- Activity: Experiment 1 -->
+    <svg class="basili-activity" x="0" y="1800">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Variant quality control</tspan>
+          <tspan x="0" dy="75"></tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata berkeley software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">AVOCADO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">GATK</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link column-link" d="M1000,75 C1300,225 1000,-1580 1240,-1575" />
+    </svg>
+    <!-- END Activity: Experiment 1 -->
+  </svg>
+  <!-- END Stage: Column 2 -->
+  
+  
+  
+  <!-- Stage: Column 3 -->
+  <svg class="basili-stage" x="2820" y="200">
+    <svg class="blue badge column-header" x="0" y="-160" font-size="100">
+      <rect width="1000" height="200" rx="50" />
+      <text transform="translate(240,60)">
+        <tspan x="0" dy="75">Analysis</tspan>
+        <tspan x="0" dy="75"> </tspan>
+      </text>
+    </svg>
+    
+    <!-- Activity: Feedback 1 -->
+    <svg class="basili-activity" x="0" y="150">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Genotype imputation</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata mango software" x="0" y="152" display="none">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152" font-size="60">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Beagle/SnpEff</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Feedback 1 -->
+    
+    <!-- Activity: Experiment 2 -->
+    <svg class="basili-activity" x="0" y="700">
+      <svg class="gray badge processing-step" x="0">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Genotype annotation</tspan>
+          <tspan x="0" dy="75"></tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata mango software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Plink/SnpEff</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Experiment 2 -->
+    
+    <!-- Activity: Feedback 2 -->
+    <svg class="basili-activity" x="0" y="1250">
+      <svg class="gray badge processing-step" x="0" font-size="50">
+        <rect width="1000" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Genome-wide assoc. studies (GWAS)</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="green badge bigdata mango software" x="0" y="152" display="">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <svg class="red badge legacy software" x="500" y="152">
+        <rect width="500" height="150" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="75">Plink</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M500,150 L500,490" />
+    </svg>
+    <!-- END Activity: Feedback 2 -->
+    
+    <!-- Activity: Validation -->
+    <svg class="basili-activity" x="0" y="1800">
+      <svg class="blue badge processing-step" x="0" font-size="90">
+        <rect width="1000" height="300" rx="50" />
+        <text transform="translate(40,25)">
+          <tspan x="0" dy="100">BIOMARKERS</tspan>
+          <tspan x="0" dy="120">DISCOVERY</tspan>
+        </text>
+      </svg>
+    </svg>
+    <!-- END Activity: Validation -->  
+  </svg>
+  <!-- END Stage: Column 3 -->
+
+</svg>

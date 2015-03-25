@@ -4,7 +4,7 @@ layout: true
 
 ## Mango: Massive data mining ANalysis of Genetic Observations
 
-- TODO: fix layout
+- TODO: fix front page
 - David Lauzon
 - ETS - DGA1031
 - Montreal,QC, March 25th 2015
@@ -58,12 +58,13 @@ layout: true
 
 ---
 
-## Background: Mutation ~ Variant, SNP, Consequence
+## Background: Mutation ~ Variant (0.1%), SNP, Consequence
 ![:scale 95%](images/intro-mutation.jpg)
 
 ???
 
 - Effect: A mutation may generate a different protein than expected (cell malfunction)
+- Lots of data, but 99.9% the same
 
 ---
 
@@ -77,46 +78,42 @@ layout: true
 
 ---
 
-## What is Big Data?
-![:scale 100%](images/broad-dnaseq.png)
+## Genomic pipeline
+![:svg](images/genomic.pipeline.svg)
 
 ---
 
-## Related work
-![:svg](images/broad-dnaseq.svg)
+## Main-stream technologies
+![:svg](images/genomic.pipeline.mainstream.svg)
+
+---
+
+## Emerging technologies
+![:svg](images/genomic.pipeline.bigdata.svg)
 
 ---
 
 ## Problem definition
 - The most popular human genomic data analysis tool is plink (Harvard University)
 - Large volume of data is slowing down the DNA variant discovery process
-  - Some analysis task takes up to a few days to compute the results
-- Most promising recent technology (ADAM) uses Big Data techniques
+  - Some analysis task takes up to a **multiple days** to compute the results
+- Most promising recent technology, ADAM (Berkeley University), uses Big Data techniques
 
 ---
 
-## Main research question
+## Research questions
 - How can the performance of genomic analysis be improved?
-
----
-
-## Sub question
-- What are the most problematic plink use cases today ?
-- What is the technological bottleneck ?
-- How can this be improved ?
+  - What are the most problematic plink use cases today ?
+  - What is the technological bottleneck ?
+  - How can it be improved while retaining compatibility with existing software ?
 
 ---
 
 ## Objective of this research
-- Propose a scalable genomic analytics framework, named (mango?), compatible with the ADAM format (Berkeley University)
-- Identify the missing data structures in ADAM format to allow plink scalability;
-- Identify the Big Data techniques that are required to improve the scalability of plink;
-
----
-
-## Originality of the work
-- Use recent Big Data technologies to solve Genomics Analysis Performance Problems
-- TODO: diagram showing Adam and the other software it replaces
+- Propose a **scalable genomic analytics framework**, named MANGO, compatible with the ADAM format (Berkeley University).
+- Identify the **missing data structures** in ADAM format to allow plink scalability;
+- Identify the **Big Data techniques** that are required to improve the scalability of plink;
+![:svg](images/genomic.pipeline.mango.svg)
 
 ---
 
@@ -133,55 +130,51 @@ layout: true
 ---
 
 ## Methodology - Experimentation
-- TODO: add a drawing of the experiment with Dr. Hamet
 - Tools used:
-  - Apache Spark: Processing engine (Spark is the most active Big Data technology of 2014).
-  - MLlib: machine learning library
-  - ADAM: Genomics Formats
-  - Avocado: DNA Variant Calling
-  - Scala: programming language
-  - Docker: infrastructure
-  - Parquet/Avro: file format
-
----
-
-## Methodology - Analysis Techniques
-
-- Measuring before (plink 1.07 and plink 1.9) and after (MANGO):
-  - **Scalability**
-    - Platform = Amazon AWS (cloud computing)
-    - Dataset = 5 open source genomes from the 1000 Genomes Project
-    - Nb of runs = 5 runs on each dataset.
-    - Nb of records = TODO T.B.D. (+ annotations ?)
-    - Tool = to record duration? TODO T.B.D.
-    - Job Turnaround time (ISO 25010) or _wall clock time_ ([Wikipedia](http://en.wikipedia.org/wiki/Wall-clock_time)): duration as perceived by the user
-    - Total CPU execution time (ISO 25010): cumulative duration of all nodes
-    - Speedup (Amdahl's law), (Karp-Flatt metric), (Gustafson's law)
-      - For distributed system, the effective speedup is (CITATION NEEDED)
-        - `S(N) = T(N) / T(1)` where `T`: Turnaround Time, and `N`: NB of worker nodes
-  
-  - **Functional correctness (_accuracy_)** (ISO 25010)
-    - We'll compare plink 1.9 and MANGO's results against results from plink 1.07
-    - NOTE: the assesment method will be precised once the genomic analysis to be optimized has been selected
-    - TODO: How do we validate the accuracy? With a genetician?
-    - Quality characteristics to evaluate (QUINT-2):
-      - **Failure ratio**: *the ratio of incorrect processed transactions to the total of presented transactions*
-      - **Significant digit ratio**: *the ratio of the implemented significant digits to the required significant digits.*
- 
-  - **Usability**
-    - **Compatibility** (ISO 25010) with file formats (VCF, ADAM, etc.)
-    - **Interoperability** (ISO 25010) of MANGO with plink
-    - **Expert judgement on operability** (ISO 25010) Is MANGO's command line easy to use, as judged by experts in the field (bioinformaticians). We'll send a satisfaction survey to the bioinformaticians involved in the 2 case studies.
+  - Apache **Spark**: Processing engine (Spark is the most active Big Data technology of 2014).
+  - **MLlib**: machine learning library
+  - **ADAM**: Genomics Formats
+  - **Avocado**: DNA Variant Calling
+  - **Scala**: programming language
+  - **Docker**: infrastructure
+  - **Parquet/Avro**: file format
 
 ---
 
 ## Expected results
 
+- MANGO improves performs the selected analysis 5-10X faster than plink
+  - MANGO results will be compared with Plink results
+    - **Platform:** Amazon AWS (cloud computing)
+    - **Dataset:** 5 open source genomes from the 1000 Genomes Project
+    - **Nb of runs:** 5 runs on each dataset.
+    - **Measure:** Job Turnaround time (ISO 25010) or _wall clock time_
+
 ---
 
 ## Preliminary results
-- VariantMiner
-- Cloud infrastructure pour les outils de berkeley
+- Collaboration with Berkeley University
+  - Contributed patches to ADAM software
+  - Contributed virtual infrastructure (Docker) for ADAM pipeline
+
+- Collaboration with many health researchers
+  - Genomic TM Simulator (Jewish General Hospital)
+  - VariantMiner (Dr. Moreau, CHUSJ)
+  - Dr. Hamet (CRCHUM)
+  - Dr. Sinett (CHUSJ)
+  - Pharmacogenomics Centre
+
+---
+
+## Originality of the work
+- Use recent Big Data technologies to solve Genomics Analysis Performance Problems
+  - Columnar file format
+  - In-memory processing
+  - Distributed computing
+  - NoSQL datastore
+  - Machine learning
+
+- At the best of our knowledge, nobody has previously used these technologies to solve this use case
 
 ---
 
