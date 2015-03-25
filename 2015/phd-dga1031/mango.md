@@ -113,6 +113,11 @@ layout: true
 - Propose a **scalable genomic analytics framework**, named MANGO, compatible with the ADAM format (Berkeley University).
 - Identify the **missing data structures** in ADAM format to allow plink scalability;
 - Identify the **Big Data techniques** that are required to improve the scalability of plink;
+
+---
+
+## Mango
+
 ![:svg](images/genomic.pipeline.mango.svg)
 
 ---
