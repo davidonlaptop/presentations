@@ -2,7 +2,43 @@
 layout: true
 ---
 
-## What is Genomics?
+## Plan
+- Background and related work
+
+---
+
+## Background: Chromosome, DNA, ACTG, Amino Acid, BP
+![:scale 100%](images/intro-acgt.jpg)
+
+---
+
+## Background: Cell, Protein
+![:scale 100%](images/intro-cell.jpg)
+
+---
+
+## Background: Genome
+![:scale 100%](images/intro-genome.jpg)
+
+---
+
+## Background: Mutation ~ Variant, SNP
+![:scale 100%](images/intro-mutation.jpg)
+
+---
+
+## Background: Allele, Genotype / Phenotype
+![:scale 100%](images/intro-allele.jpg)
+
+---
+
+## Background: Cancer
+![:scale 100%](images/intro-cancer.jpg)
+
+---
+
+## Background: Genomics
+- TODO
 
 ---
 
@@ -11,7 +47,7 @@ layout: true
 
 ---
 
-## Background and related work
+## Related work
 ![:svg](images/broad-dnaseq.svg)
 
 ---
