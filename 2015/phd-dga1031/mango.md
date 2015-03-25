@@ -53,29 +53,11 @@ layout: true
 
 ![:svg](images/basili.svg)
 
----
+???
 
-## Methodology (OLD) - Planning (Basili Framework)
-- TODO: produce a drawing for everything
-- Stages:
-  1. **Definition**
-    - *INPUT:* Motivation and problem definition
-    - *OUTPUT:* Research question, research planning
-  2. **Litterature review**
-    - *INPUT:* Litterature review
-    - *OUTPUT:* A survey designed for bioinformaticians and geneticians to assess the most important features of plink software that slows down their DNA analysis process and their quality criteria for the adoption of a software replacement to plink.
-  3. **Scaling issues identification**
-    - *INPUT:* Selected genome analysis with poor scalability + user quality expectations for MANGO software
-    - *OUTPUT:* Identification of Big Data techniques and data structures required to improve the scalability of plink software and end-user satisfaction
-  4. **Experiment 1**
-    - *INPUT:* Case study 1 (with Dr. Hamet)
-    - *OUTPUT:* Design of a prototype version of MANGO
-  5. **Experiment 2**
-    - *INPUT:* Case study 2 (Berkeley partner or other local research group like Dr. Sinett / Pharmacogenomics)
-    - *OUTPUT:* Design an improved version of MANGO
-  6. **Validation**
-    - *INPUT:* The 2 case studies
-    - *OUTPUT:* Identification of constraints and issues to improve
+- **SURVEY** designed for bioinformaticians and geneticians to assess the most important features of plink software that slows down their DNA analysis process and their quality criteria for the adoption of a software replacement to plink.
+- **PROBLEM**: Which analysis have poor scalability + What are the use expectations in ACCURACY & USABILITY from the users.
+- **TECHNIQUES** includes data structures required to improve the scalability of plink software and end-user satisfaction 
 
 ---
 
