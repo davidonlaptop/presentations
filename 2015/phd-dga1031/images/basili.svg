@@ -1,0 +1,261 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     viewBox="0 0 4000 3000"
+     font-size="70"
+     class="green basili">
+  
+  <style type="text/css">
+    <![CDATA[
+
+.badge text {
+  font-family: "DejaVu Sans", Verdana,Geneva,sans-serif;
+}
+
+.badge rect {
+  stroke-width: 10;
+}
+
+.basili-stage {
+  overflow:visible;
+}
+.basili-activity {
+  overflow:visible;
+}
+.column-header {
+  font-family: "DejaVu Sans", Verdana,Geneva,sans-serif;
+  font-weight: bold;
+  stroke: black;
+  stroke-width: 5;
+  fill: #97CA00;
+}
+#markerCircle {
+  stroke: none;
+  fill: black;
+}
+#markerArrow {
+  fill: black;
+}
+.link {
+  stroke: blue;
+  stroke-width: 10;
+  fill: none;
+  marker-start: url(#markerCircle);
+  marker-end: url(#markerArrow);
+}
+
+.green .badge rect {
+  fill: #97CA00;
+  fill-opacity: 100%;
+}
+.green .badge text {
+  fill: white;
+}
+.green .link {
+  stroke: black;
+}
+
+.white .badge rect {
+  fill: #0;
+  stroke: #005000;
+  fill-opacity: 0%;
+}
+
+    ]]>
+  </style>
+
+<defs>
+    <marker id="markerCircle" viewBox="-2 -2 4 4" markerWidth="4" markerHeight="4" refx="0" refy="0">
+      <circle cx="0" cy="0" r="2" />
+    </marker>
+    <marker id="markerArrow" viewBox="0 -3 6 6" markerWidth="6" markerHeight="6" refx="0" refy="0" orient="auto">
+      <path d="M0,-3 L0,3 L6,0"/>
+    </marker>
+  </defs>
+  
+  <!-- Stage: Column 1 -->
+  <svg class="basili-stage" x="120" y="200">
+    <text class="column-header" x="125" font-size="150">INPUT</text>
+    <text class="column-header" x="950" font-size="150">OUTPUT</text>
+    
+    <!-- Activity: Definition -->
+    <svg class="basili-activity" x="0" y="150">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Motivation and </tspan>
+          <tspan x="0" dy="75">problem definition</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Research question</tspan>
+          <tspan x="0" dy="75">and planning</tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Definition -->
+    
+    <!-- Activity: Litterature review -->
+    <svg class="basili-activity" x="0" y="700">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,90)">
+          <tspan x="0" dy="75">Litterature review</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,90)">
+          <tspan x="0" dy="75">Plink users survey</tspan>
+          <tspan x="0" dy="75"> </tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Litterature review -->
+    
+    <!-- Activity: Identification of Scaling issues -->
+    <svg class="basili-activity" x="0" y="1250">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Selected problematic</tspan>
+          <tspan x="0" dy="75">Genomic analysis</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900" font-size="50">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(50,50)">
+          <tspan x="0" dy="75">Identification of the required</tspan>
+          <tspan x="0" dy="75">Big Data techniques</tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Identification of Scaling issues -->
+    
+    <!-- Activity: Experiment 1 -->
+    <svg class="basili-activity" x="0" y="1800">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Case study 1</tspan>
+          <tspan x="0" dy="75">(with Dr. Hamet)</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75">Prototype 1</tspan>
+        </text>
+      </svg>
+      <path class="link column-link" d="M1715,150 C2000,250 1750,-1550 2010,-1525" />
+    </svg>
+    <!-- END Activity: Experiment 1 -->    
+  </svg>
+  <!-- END Stage: Column 1 -->
+  
+  
+  
+  <!-- Stage: Column 2 -->
+  <svg class="basili-stage" x="2180" y="200">
+    <text class="column-header" x="125" font-size="150">INPUT</text>
+    <text class="column-header" x="950" font-size="150">OUTPUT</text>
+    
+    <!-- Activity: Feedback 1 -->
+    <svg class="basili-activity" x="0" y="150">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Feedback from</tspan>
+          <tspan x="0" dy="75">case study 1</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Revised design</tspan>
+          <tspan x="0" dy="75"></tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Feedback 1 -->
+    
+    <!-- Activity: Experiment 2 -->
+    <svg class="basili-activity" x="0" y="700">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Case study 2</tspan>
+          <tspan x="0" dy="75">(Berkeley partner)</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75">Prototype 2</tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Experiment 2 -->
+    
+    <!-- Activity: Feedback 2 -->
+    <svg class="basili-activity" x="0" y="1250">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Feedback from</tspan>
+          <tspan x="0" dy="75">case study 2</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">MANGO</tspan>
+          <tspan x="0" dy="75">Final version</tspan>
+        </text>
+      </svg>
+      <path class="link output-link" d="M1300,300 C1350,525 400,325 400,490" />
+    </svg>
+    <!-- END Activity: Feedback 2 -->
+    
+    <!-- Activity: Validation -->
+    <svg class="basili-activity" x="0" y="1800">
+      <svg class="badge basili-input" x="0">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Validation of the</tspan>
+          <tspan x="0" dy="75">case studies</tspan>
+        </text>
+      </svg>
+      <path class="link input-link" d="M800,150 L870,150" />
+      <svg class="badge basili-output" x="900" font-size="50">
+        <rect width="800" height="300" rx="50" />
+        <text transform="translate(40,60)">
+          <tspan x="0" dy="75">Identification of constraints</tspan>
+          <tspan x="0" dy="75">and issues to improve</tspan>
+        </text>
+      </svg>
+    </svg>
+    <!-- END Activity: Validation -->  
+  </svg>
+  <!-- END Stage: Column 2 -->
+
+</svg>

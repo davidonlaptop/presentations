@@ -7,6 +7,7 @@ layout: true
 ---
 
 ## What is Big Data?
+![:scale 100%](images/broad-dnaseq.png)
 
 ---
 
@@ -49,6 +50,12 @@ layout: true
 ---
 
 ## Methodology - Planning (Basili Framework)
+
+![:svg](images/basili.svg)
+
+---
+
+## Methodology (OLD) - Planning (Basili Framework)
 - TODO: produce a drawing for everything
 - Stages:
   1. **Definition**
