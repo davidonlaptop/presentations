@@ -181,7 +181,7 @@ class: center
   - NoSQL datastore
   - Machine learning
 
-- At the best of our knowledge, nobody has previously used these technologies to solve this use case
+- At the best of our knowledge, nobody has previously used these technologies to solve this use case with plink.
 
 ---
 

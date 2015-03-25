@@ -392,7 +392,7 @@
           <tspan x="0" dy="75"></tspan>
         </text>
       </svg>
-      <svg class="green badge bigdata mango software" x="0" y="152" display="">
+      <svg class="green badge bigdata mango software" x="0" y="152" display="none">
         <rect width="500" height="150" rx="50" />
         <text transform="translate(40,25)">
           <tspan x="0" dy="75">MANGO</tspan>
