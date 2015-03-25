@@ -20,7 +20,7 @@
   - Functional annotation
   - Variant evaluation
 
-4. Whole Genome Analysis Studies (GWAS) 
+4. Genome-wide association studies (GWAS) 
   - Variants management
   - Summary stats
   - Population stratification
