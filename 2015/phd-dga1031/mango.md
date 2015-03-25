@@ -4,6 +4,13 @@ layout: true
 
 ## Plan
 - Background and related work
+- Problem definition 
+- Research question & objectives
+- Methodology
+- Expected results
+- Preliminary results
+- Schedule
+- References
 
 ---
 
