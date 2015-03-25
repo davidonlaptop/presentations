@@ -25,12 +25,12 @@ layout: true
 ---
 
 ## Background: Genome
-![:scale 100%](images/intro-genome.jpg)
+![:scale 90%](images/intro-genome.jpg)
 
 ---
 
 ## Background: Mutation ~ Variant, SNP
-![:scale 100%](images/intro-mutation.jpg)
+![:scale 95%](images/intro-mutation.jpg)
 
 ---
 
